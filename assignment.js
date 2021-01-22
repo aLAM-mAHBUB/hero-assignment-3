@@ -4,12 +4,12 @@
 
 function kilometerToMeter(kilometer) {
     if (typeof kilometer === "string") {
-        return "Distance value can't be a string. Please insert a number.";
+        return "Distance value can't be string. Please insert zero (0) or any positive number.";
     } else if (kilometer >= 0) {
         var meter = kilometer * 1000;
         return meter;
     } else {
-        return "Distance can't be negative.";
+        return "Distance can't be negative. Please insert zero (0) or any positive number.";
     }
 }
 
@@ -30,7 +30,13 @@ function budgetCalculator(watch, phone, laptop) {
         typeof phone === "string" ||
         typeof laptop === "string"
     ) {
-        return "Product's amount can't be a string. Please insert a number.";
+        return "Product's amount can't be string. Please insert zero (0) or any positive integer number.";
+    } else if (
+        (Number(watch) === watch && watch % 1 !== 0) ||
+        (Number(phone) === phone && phone % 1 !== 0) ||
+        (Number(laptop) === laptop && laptop % 1 !== 0)
+    ) {
+        return "Product's amount can't be float number. Please insert zero (0) or any positive integer number.";
     } else if (watch >= 0 && phone >= 0 && laptop >= 0) {
         var watchPrice = 50;
         watchPrice = watchPrice * watch;
@@ -41,10 +47,10 @@ function budgetCalculator(watch, phone, laptop) {
         var totalBudget = watchPrice + phonePrice + laptopPrice;
         return totalBudget;
     } else {
-        return "Product's amount can't be negative.";
+        return "Product's amount can't be negative. Please insert zero (0) or any positive integer number.";
     }
 }
-var resultTwo = budgetCalculator(100, 120, 150);
+var resultTwo = budgetCalculator(7, 12, 15);
 console.log(resultTwo);
 
 // Third Problem: hotelCost calculation.
@@ -59,9 +65,11 @@ function hotelCost(days) {
     var totalCost = 0;
 
     if (typeof days === "string") {
-        return "Days value can't be a string. Please insert zero (0) or any positive number.";
+        return "Days value can't be string. Please insert zero (0) or any positive integer number.";
     } else if (days < 0) {
-        return "Days can't be negative. Please insert zero (0) or any positive number.";
+        return "Days can't be negative. Please insert zero (0) or any positive integer number.";
+    } else if (Number(days) === days && days % 1 !== 0) {
+        return "Days can't be float number. Please insert zero (0) or any positive integer number.";
     } else if (days <= 10) {
         totalCost = days * 100;
     } else if (days <= 20) {
@@ -79,5 +87,5 @@ function hotelCost(days) {
     return totalCost;
 }
 
-var resultThree = hotelCost(25);
+var resultThree = hotelCost(25.0);
 console.log(resultThree);
