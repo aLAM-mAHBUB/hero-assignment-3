@@ -90,14 +90,20 @@ function hotelCost(days) {
 var resultThree = hotelCost(25.0);
 console.log(resultThree);
 
-// Fourth Problem: identifying the largest name from an array.
+// Fourth Problem: Identifying the largest name from an array.
+
+// In this function, you have to insert an array containing "string".
+// If you insert any "number" in the array, the function will show an error message.
 
 function megaFriend(friend) {
     var largestName = friend[0];
 
     for (var i = 0; i < friend.length; i++) {
         var char = friend[i];
-        if (char.length > largestName.length) {
+
+        if (typeof char !== "string") {
+            return "You can't insert any 'number' in this array. Please insert any 'string' in the array.";
+        } else if (char.length > largestName.length) {
             largestName = char;
         }
     }
@@ -112,8 +118,10 @@ var friendList = [
     "Nayem Bhuiyan",
     "Saiful Islam",
     "Mahabub Alam",
+    "Radib Al-Amin",
 ];
 var resultFour = megaFriend(friendList);
 console.log(resultFour);
-var result = megaFriend(["Omar", "Naem", "Radib"]);
-console.log(result);
+
+var resultFive = megaFriend([12, 32, 25, 10, 21]);
+console.log(resultFive);
