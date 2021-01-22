@@ -90,14 +90,13 @@ function hotelCost(days) {
 var resultThree = hotelCost(25.0);
 console.log(resultThree);
 
-// Fourth Problem:
+// Fourth Problem: identifying the largest name from an array.
 
 function megaFriend(friend) {
     var largestName = friend[0];
 
     for (var i = 0; i < friend.length; i++) {
         var char = friend[i];
-
         if (char.length > largestName.length) {
             largestName = char;
         }
@@ -112,8 +111,9 @@ var friendList = [
     "Qoushick Ahamed",
     "Nayem Bhuiyan",
     "Saiful Islam",
+    "Mahabub Alam",
 ];
 var resultFour = megaFriend(friendList);
 console.log(resultFour);
-var result = megaFriend(["Omar", "Naem", "Qoushick"]);
+var result = megaFriend(["Omar", "Naem", "Radib"]);
 console.log(result);
