@@ -89,3 +89,22 @@ function hotelCost(days) {
 
 var resultThree = hotelCost(25.0);
 console.log(resultThree);
+
+// Fourth Problem:
+
+function megaFriend(friendList) {
+    var largestName = friendList[0];
+
+    for (var i = 0; i < friendList.length; i++) {
+        var char = friendList[i];
+
+        if (char.length > largestName.length) {
+            largestName = char;
+        }
+    }
+    return largestName;
+}
+
+var friend = ["Omar", "Bashir", "Tareq", "Qoushick", "Nayem", "Saiful"];
+var resultFour = megaFriend(friend);
+console.log(resultFour);
