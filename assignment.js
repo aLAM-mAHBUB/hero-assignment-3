@@ -92,11 +92,11 @@ console.log(resultThree);
 
 // Fourth Problem:
 
-function megaFriend(friendList) {
-    var largestName = friendList[0];
+function megaFriend(friend) {
+    var largestName = friend[0];
 
-    for (var i = 0; i < friendList.length; i++) {
-        var char = friendList[i];
+    for (var i = 0; i < friend.length; i++) {
+        var char = friend[i];
 
         if (char.length > largestName.length) {
             largestName = char;
@@ -105,6 +105,15 @@ function megaFriend(friendList) {
     return largestName;
 }
 
-var friend = ["Omar", "Bashir", "Tareq", "Qoushick", "Nayem", "Saiful"];
-var resultFour = megaFriend(friend);
+var friendList = [
+    "Omar Ali",
+    "Bashir Ahamed",
+    "Tareq Khokon",
+    "Qoushick Ahamed",
+    "Nayem Bhuiyan",
+    "Saiful Islam",
+];
+var resultFour = megaFriend(friendList);
 console.log(resultFour);
+var result = megaFriend(["Omar", "Naem", "Qoushick"]);
+console.log(result);
