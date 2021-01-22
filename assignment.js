@@ -1,4 +1,5 @@
 //  https://github.com/aLAM-mAHBUB/hero-assignment-3
+
 // First Problem: Kilometer to meter conversion calculator.
 
 // we know, 1 kilometer = 1000 meter.
@@ -14,10 +15,10 @@ function kilometerToMeter(kilometer) {
     }
 }
 
-var resultOne = kilometerToMeter(5);
+var resultOne = kilometerToMeter(7);
 console.log(resultOne);
 
-// Second Problem: creating a budget calculator.
+// Second Problem: Creating a budget calculator.
 
 // Given values are listed below:
 
@@ -51,10 +52,10 @@ function budgetCalculator(watch, phone, laptop) {
         return "Product's amount can't be negative. Please insert zero (0) or any positive integer number.";
     }
 }
-var resultTwo = budgetCalculator(7, 12, 15);
+var resultTwo = budgetCalculator(7, 12, 5);
 console.log(resultTwo);
 
-// Third Problem: hotelCost calculation.
+// Third Problem: Hotelcost calculation.
 
 // Given values are listed below:
 
@@ -88,7 +89,7 @@ function hotelCost(days) {
     return totalCost;
 }
 
-var resultThree = hotelCost(25.0);
+var resultThree = hotelCost(71);
 console.log(resultThree);
 
 // Fourth Problem: Identifying the largest name from an array.
